@@ -20,7 +20,7 @@ class ConfirmGoogleCaptcha extends Component {
     }
     render() {
         let { show } = this.state;
-        let { siteKey, baseUrl, languageCode, onMessage, cancelButtonText } = this.props;
+        let { siteKey, baseUrl, languageCode, onMessage, cancelButtonText, cancelButtonBackgroundColor } = this.props;
         return (
             <Modal
                 useNativeDriver
@@ -38,6 +38,7 @@ class ConfirmGoogleCaptcha extends Component {
                         onMessage={onMessage}
                         languageCode={languageCode}
                         cancelButtonText={cancelButtonText}
+                        cancelButtonBackgroundColor={cancelButtonBackgroundColor}
                     />
                 </SafeAreaView>
             </Modal>
