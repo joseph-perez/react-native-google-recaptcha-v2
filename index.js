@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    View, StyleSheet, Dimensions
+    SafeAreaView, StyleSheet, Dimensions
 } from 'react-native';
 import Modal from 'react-native-modal';
 import GoogleReCaptcha from './GoogleReCaptcha';
@@ -31,7 +31,7 @@ class ConfirmGoogleCaptcha extends Component {
                 animationIn="fadeIn"
                 animationOut='fadeOut'
                 isVisible={show}>
-                <View style={styles.wrapper}>
+                <SafeAreaView style={styles.wrapper}>
                     <GoogleReCaptcha
                         url={baseUrl}
                         siteKey={siteKey}
@@ -39,7 +39,7 @@ class ConfirmGoogleCaptcha extends Component {
                         languageCode={languageCode}
                         cancelButtonText={cancelButtonText}
                     />
-                </View>
+                </SafeAreaView>
             </Modal>
         );
     }
